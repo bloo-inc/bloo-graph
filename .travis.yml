@@ -12,6 +12,10 @@ cache:
   directories:
     - "$HOME/google-cloud-sdk/"
 
+stages:
+  - before_build
+  - build
+
 env:
   global:
     - GOOGLE_APPLICATION_CREDENTIALS=~/gcloud-service-key.json
