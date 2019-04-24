@@ -1,0 +1,10 @@
+{
+  "apps": [{
+    "name": "BlooGraph",
+    "script": "npm run prod",
+    "watch": true,
+    "env": {
+      "NODE_ENV": "production",
+    }
+  }]
+}

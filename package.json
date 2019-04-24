@@ -1,0 +1,36 @@
+{
+  "name": "bloograph",
+  "version": "1.0.0",
+  "description": "GraphQL API for Bloo.",
+  "main": "app.js",
+  "scripts": {
+    "prod": "node -r esm app.js",
+    "dev": "nodemon -r esm app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://blootom@gitlab.com/blootom/bloograph.git"
+  },
+  "author": "Tom Gouder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/blootom/bloograph/issues"
+  },
+  "homepage": "https://gitlab.com/blootom/bloograph#readme",
+  "dependencies": {
+    "apollo-server": "^2.4.8",
+    "apollo-server-express": "^2.4.8",
+    "apollo-tracing": "^0.5.2",
+    "colors": "^1.3.3",
+    "dotenv": "^7.0.0",
+    "esm": "^3.2.21",
+    "express": "^4.16.4",
+    "graphql": "^14.2.0",
+    "graphql-tools": "^4.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "mariadb": "^2.0.3",
+    "node-os-utils": "^1.0.7",
+    "sequelize": "^5.2.4"
+  },
+  "devDependencies": {}
+}
