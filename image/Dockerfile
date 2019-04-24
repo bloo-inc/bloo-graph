@@ -4,13 +4,16 @@ FROM keymetrics/pm2:latest-alpine
 ENV NPM_CONFIG_LOGLEVEL warn
 
 RUN apk update && apk upgrade && \
-  apk add --no-cache bash git openssh
+  apk add --no-cache bash git openssh && \
+  mkdir /opt/bloograph/
 
-RUN git clone --progress --verbose https://blootom:Xfm100.2@gitlab.com/bloo-cloud/bloo-graph.git /opt/bloograph && \
-  cd /opt/bloograph/ && \
-  npm install
+COPY ./ /opt/bloograph/
+
+RUN ls -la /opt/bloograph/
 
 WORKDIR /opt/bloograph
+
+RUN npm install
 
 EXPOSE 4000
 
