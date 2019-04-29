@@ -1,6 +1,10 @@
 # Use Dockerized infrastructure
 sudo: false
 
+branches:
+  only:
+  - master
+
 language: node_js
 node_js:
   - "6"
