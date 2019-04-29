@@ -17,4 +17,4 @@ RUN npm install
 
 EXPOSE 4000
 
-CMD [ "pm2-runtime", "start", "ecosystem.json" ]
+CMD [ "pm2-runtime", "start", "conf/ecosystem.config.js" ]
