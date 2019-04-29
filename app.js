@@ -52,5 +52,5 @@ server.applyMiddleware({ app, path:config.graphPath });
 app.listen({
   port: config.graphPort
 },() => {
-  log.info('GraphQL API initiated.');
+  log.info('GraphQL service initiated.');
 });
