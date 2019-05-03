@@ -36,4 +36,13 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+/**
+ * Model Associations
+ */
+
+db.User.hasMany(db.Workspace, {
+  as: "Workspaces",
+  foreignKey: 'owner_uuid' /* Owner Relation */
+});
+
 export { db }

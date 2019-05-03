@@ -6,6 +6,7 @@ const type = (`
     username : String!
     email : String!
     name : String!
+    workspaces: [Workspace]!
   }
 
   extend type Query {
@@ -18,6 +19,12 @@ const resolvers = {
     self: (root, {}, {user, log, db, err}) => {
       if (!user) { throw new AuthenticationError("Unauthorized") }
       return user;
+    }
+  },
+  User : {
+    workspaces: (root, {}, {user, log, db, err}) => {
+      if (!user) { throw new AuthenticationError("Unauthorized") }
+      return user.getWorkspaces();
     }
   }
 }
