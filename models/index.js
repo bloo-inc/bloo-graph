@@ -45,4 +45,9 @@ db.User.hasMany(db.Workspace, {
   foreignKey: 'owner_uuid' /* Owner Relation */
 });
 
+db.Workspace.hasMany(db.Resource, {
+  as: "Resources",
+  foreignKey: 'workspace_uuid' /* Workspace Relation */
+});
+
 export { db }
