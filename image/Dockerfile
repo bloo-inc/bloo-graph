@@ -9,11 +9,9 @@ RUN apk update && apk upgrade && \
 
 COPY ./ /opt/bloograph/
 
-RUN ls -la /opt/bloograph/
-
 WORKDIR /opt/bloograph
 
-RUN npm install
+RUN npm install -g nodemon --loglevel=error && npm install --loglevel=error
 
 EXPOSE 4000
 

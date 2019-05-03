@@ -1,14 +1,13 @@
 import http from 'http';
 import express from 'express';
+import jwt from 'jsonwebtoken';
 
 import { ApolloServer } from 'apollo-server-express';
-import jwt from 'jsonwebtoken';
-import { db } from './models';
 
+import { db } from './models';
 import { config, env } from './conf/config.js';
 import { typeDefs } from './conf/schema';
 import { resolvers } from './conf/resolvers';
-
 import { log } from './utils/utils.js';
 
 log.info('Running in ' + config.env + ' mode.');

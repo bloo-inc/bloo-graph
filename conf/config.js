@@ -9,6 +9,7 @@ const config = {
 
 if (config.env == 'development') {
   require('dotenv').config()
+  config.accessTokenLife = 86400;
 }
 
 const env = process.env;

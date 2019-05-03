@@ -13,6 +13,5 @@ module.exports = {
   apps : [{
     name: "BlooGraph",
     script: "npm run " + scriptTarget,
-    watch: watchTarget
   }]
 }
