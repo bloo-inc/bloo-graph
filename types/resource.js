@@ -10,8 +10,6 @@ const type = (`
   }
 `)
 
-const resolvers = {
-
-}
+const resolvers = {}
 
 export {type, resolvers}
