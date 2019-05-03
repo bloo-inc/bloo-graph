@@ -1,11 +1,9 @@
-var osu = require('node-os-utils');
-var cpu = osu.cpu;
-var mem = osu.mem;
+var osutils = require("os-utils");
 
 const type = (`
   type healthSet {
-    memoryUsage: String
-    cpuUsage: String
+    uptime: String
+    memory: String
   }
 
   extend type Query {
@@ -16,13 +14,7 @@ const type = (`
 const resolvers = {
   Query: {
     _health: async (root, {}, {db}) => {
-
-      let memoryUsage = await mem.info();
-      memoryUsage = memoryUsage.usedMemMb + "Mb";
-
-      let cpuUsage = await cpu.usage() + "%";
-
-      return {memoryUsage, cpuUsage}
+      return {memory:osutils.freemem() + "MB", uptime:osutils.sysUptime() + "ms"}
     }
   }
 }
