@@ -42,12 +42,12 @@ db.Sequelize = Sequelize;
 
 db.User.hasMany(db.Workspace, {
   as: "Workspaces",
-  foreignKey: 'owner_uuid' /* Owner Relation */
+  foreignKey: 'owner' /* Owner Relation */
 });
 
 db.Workspace.hasMany(db.Resource, {
   as: "Resources",
-  foreignKey: 'workspace_uuid' /* Workspace Relation */
+  foreignKey: 'workspace' /* Workspace Relation */
 });
 
 export { db }
